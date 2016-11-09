@@ -1,7 +1,9 @@
 package net.battleplugins.msutton.lschvz;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
 
 public class Home extends AppCompatActivity {
@@ -29,5 +31,8 @@ public class Home extends AppCompatActivity {
         emailTV.setText("Your email is " + email);
         err.setText(Err);
 
+    }
+    protected void openCamera(View view){
+        startActivity(new Intent(this, AgentImage.class));
     }
 }
